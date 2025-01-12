@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tribute Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Tribute to Sardar Vallabhbhai Patel</h1>
+    </header>
+    <main>
+        <section class="gallery">
+            <h2>Sardar Vallabhbhai Patel</h2>
+            <img src="image2.jpeg" alt=" Image of Sardar Vallabhbhai Patel">
+        </section>
+        <section class="about">
+            <h2>About the Legend</h2>
+            <p>Sardar Vallabhbhai Patel (1875 - 1950) was a leader of the Indian National Congress and a key figure in India's independence movement and post-independence integration : <br><br> 
+Independence movement : <br>
+Patel was a leader in the fight for India's independence, organizing nonviolent civil disobedience against the British Raj. He was jailed multiple times for his patriotic efforts. <br><br>
+Integration of India : <br>
+After independence, Patel played a key role in integrating India, persuading rulers of princely states to join the union. He also helped frame the Constitution of India and establish administrative frameworks.<br><br> 
+Home Minister and Deputy Prime Minister : <br>
+Patel served as India's first Home Minister and first Deputy Prime Minister after independence. He also took charge of the Information and Broadcasting Ministry.<br><br> 
+Partition of India : <br>
+Patel was one of the first Congress leaders to accept that partition was a necessary solution to the separatist movement. He represented India in the Partition council, where he helped divide public assets.<br> <br>
+Nickname : <br>Patel earned the nickname "Iron Man of India" for his ability to unite the nation through diplomacy and firmness. <br><br>
+Death : <br>
+Patel's health declined in 1950 and he died of a heart attack on December 15, 1950. <br><br></p>
+        </section>
+    </main>
+    <footer>
+        <p>For more information check out Sardar Vallabhbhai Patel on wikipedia. [Developed by] @Jayashree </p>
+    </footer>
+</body>
+</html>
+
+/* STYLES.CSS */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: #333;
+}
+
+header {
+    background-color: #73AD21;
+    color: yellow;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+main {
+    padding: 2rem;
+}
+
+.about, .gallery {
+    margin: 2rem 0;
+}
+
+h1, h2 {
+    font-family: 'Georgia', serif;
+    color: white;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem 0;
+}
+
+footer {
+    background-color: #73AD21;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+OUTPUT
+file:///C:/Users/user/Documents/TRIBUTE%20PAGE%20HTML.html
+   
