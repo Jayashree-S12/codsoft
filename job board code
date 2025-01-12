@@ -205,7 +205,6 @@ app.get('/jobs/:id', async (req, res) => {
 
 app.post('/jobs/:id/apply', async (req, res) => {
   const _id = req.params.id;
-  // Handle job application here
   res.send({ message: 'Application received' });
 });
 
