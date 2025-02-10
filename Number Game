@@ -1,0 +1,106 @@
+//NUMBER GAME 
+import java.lang.System;
+import java.util.Random;
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        Random random = new Random();
+        int score = 0;
+        boolean playAgain = true;
+
+        while (playAgain) {
+            int secretNumber = random.nextInt(100) + 1; 
+            int attempts = 0;
+            int maxAttempts = 4;
+
+            System.out.println("I've chosen a number between 1 and 100.  You have " + maxAttempts + " attempts.");
+
+            while (attempts < maxAttempts) {
+                attempts++;
+                System.out.print("Attempt " + attempts + ": Enter your guess: ");
+                if (!s.hasNextInt()) { 
+                    System.out.println("Invalid input. Please enter a number.");
+                    s.next(); 
+                    continue; 
+                }
+                int guess = s.nextInt();
+
+                if (guess < 1 || guess > 100) {
+                    System.out.println("Please enter a number between 1 and 100.");
+                    continue;
+                }
+
+                if (guess == secretNumber) {
+                    System.out.println("Props to you!");
+                    System.out.println("You guessed the number in " + attempts + " attempts.");
+                    score++;
+                    break; 
+                } else if (guess < secretNumber) {
+                    System.out.println("Too low.");
+                } else {
+                    System.out.println("Too high.");
+                }
+
+                if (attempts == maxAttempts) {
+                    System.out.println("You've run out of attempts.Try again later. Better luck for next time!");
+                }
+            }
+            System.out.print("Do you want to play again? (yes/no): ");
+            String playChoice = s.next().toLowerCase();
+            playAgain = playChoice.equals("yes");
+        }
+        System.out.println("Thanks for playing keep it up! Your final score is: " + score);
+    }
+}
+
+
+OUTPUT
+I've chosen a number between 1 and 100.  You have 4 attempts.
+Attempt 1: Enter your guess: 35
+Too high.
+Attempt 2: Enter your guess: 23
+Too high.
+Attempt 3: Enter your guess: 12
+Too low.
+Attempt 4: Enter your guess: 21
+Too high.
+You've run out of attempts.Try again later. Better luck for next time!
+Do you want to play again? (yes/no): yes
+I've chosen a number between 1 and 100.  You have 4 attempts.
+Attempt 1: Enter your guess: 25
+Too low.
+Attempt 2: Enter your guess: 50
+Too low.
+Attempt 3: Enter your guess: 78
+Too low.
+Attempt 4: Enter your guess: 99
+Too high.
+You've run out of attempts.Try again later. Better luck for next time!
+Do you want to play again? (yes/no): yes
+I've chosen a number between 1 and 100.  You have 4 attempts.
+Attempt 1: Enter your guess: 25
+Too low.
+Attempt 2: Enter your guess: 90
+Too high.
+Attempt 3: Enter your guess: 85
+Too high.
+Attempt 4: Enter your guess: 80
+Too high.
+You've run out of attempts.Try again later. Better luck for next time!
+Do you want to play again? (yes/no): yes
+I've chosen a number between 1 and 100.  You have 4 attempts.
+Attempt 1: Enter your guess: 25
+Too low.
+Attempt 2: Enter your guess: 50
+Too low.
+Attempt 3: Enter your guess: 75
+Too low.
+Attempt 4: Enter your guess: 77
+Props to you!
+You guessed the number in 4 attempts.
+Do you want to play again? (yes/no): no
+Thanks for playing keep it up! Your final score is: 1
+
+=== Code Execution Successful ===
